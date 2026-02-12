@@ -1,0 +1,1 @@
+System Notes for implementors. https://github.com/Pixel-Agents/unity-game-assistant/tree/main/system-notes
