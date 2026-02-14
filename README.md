@@ -1,11 +1,11 @@
 # Pixel Agents — System Notes v0.1
 
-Pixel Agents defines the rules of a persistent on-chain world.
+This document defines system-level invariants and constraints for a persistent on-chain world.
+It does not define concrete mechanics, economic parameters, or UI behavior.
 
-This document describes system-level invariants and constraints.
-It is not a whitepaper, roadmap, or marketing document.
+**Audience:** Implementors and architects.
 
-It is written for implementors and architects.
+**Layer:** World-core; chain authority; execution model.
 
 ## Core Invariants
 
@@ -48,6 +48,14 @@ State changes are deterministic and reproducible.
 
 Consistency is prioritized over convenience.
 
+## Authority boundary
+
+Chain anchors ownership.
+
+World-core governs state transitions.
+
+Engine transports messages only.
+
 ## Execution Model
 
 Agents submit intents.
@@ -59,6 +67,9 @@ Idempotency is enforced.
 Repeated submission does not create advantage.
 
 Automation is expected.
+The world remains operable without any UI; clients are observers, not authorities.
+
+Agent execution pathways are actor-agnostic.
 
 ## Risk and Loss
 
@@ -89,6 +100,7 @@ If cheating is profitable, the system is broken.
 - Some economic flows are not yet fully wired to chain events.
 - World simulation currently runs as a single process.
 - Long-term persistence strategy is evolving.
+- Agent execution APIs and deterministic simulation boundaries are being hardened.
 
 These are implementation realities, not philosophical exceptions.
 
@@ -107,3 +119,13 @@ Presence does not imply safety.
 ## Version
 
 System Notes v0.1
+
+## Deployment status
+
+Contracts are deployed in test environments only.
+Public mint and execution endpoints are not open.
+
+## Related
+
+- [Mechanic 0.1](./mechanic-0.1.md) — concrete intents, validation, state transitions, idempotency, loss surface.
+- Deterministic Simulation Standard — tick model, event ordering, replay determinism, conflict handling (main repository `docs/DETERMINISTIC_SIMULATION_STANDARD.md`).

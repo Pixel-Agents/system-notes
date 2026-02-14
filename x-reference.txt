@@ -1,1 +1,5 @@
-System Notes for implementors. https://github.com/Pixel-Agents/unity-game-assistant/tree/main/system-notes
+Pixel Agents System Notes — system-level rules and constraints for a persistent on-chain world.
+For implementors and architects. Mechanics and invariants only; no roadmap, no marketing.
+Deployment: test environments only. Public participation not open.
+
+https://github.com/Pixel-Agents/system-notes
